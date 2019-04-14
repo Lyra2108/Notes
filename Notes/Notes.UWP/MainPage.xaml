@@ -8,7 +8,18 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
-    </Grid>
+    <StackPanel Spacing="8">
+        <TextBox Name="UserName"
+                 Header="Name of new User:"
+                 PlaceholderText="Username" />
+        <Button Click="CreateUser">Add User</Button>
+        <TextBlock Name="Test"></TextBlock>
+        <ListView Name="UsersList" ItemsSource="{x:Bind Users, Mode=OneWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
 </Page>

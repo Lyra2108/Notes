@@ -158,6 +158,12 @@
   <ItemGroup>
     <None Include="Notes.UWP_TemporaryKey.pfx" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Notes.Storage\Notes.Storage.csproj">
+      <Project>{2558c16d-0272-4d82-99ff-258b536c3bb0}</Project>
+      <Name>Notes.Storage</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
