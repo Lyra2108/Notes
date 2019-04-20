@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Notes.Storage;
 using Notes.Storage.Model;
 
 namespace Notes.UWP
@@ -26,11 +25,10 @@ namespace Notes.UWP
         {
             using (var context = new NotesContext())
             {
-                var user = new User{Name = UserName.Text};
+                var user = new User {Name = UserName.Text};
                 context.Users.Add(user);
                 context.SaveChanges();
                 Users = context.Users;
-
             }
         }
     }

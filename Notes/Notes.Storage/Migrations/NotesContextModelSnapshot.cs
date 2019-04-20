@@ -6,24 +6,20 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 namespace Notes.Storage.Migrations
 {
     [DbContext(typeof(NotesContext))]
-    partial class NotesContextModelSnapshot : ModelSnapshot
+    internal class NotesContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062");
-
+               .HasAnnotation("ProductVersion", "2.2.4-servicing-10062");
             modelBuilder.Entity("Notes.Storage.Model.User", b =>
             {
                 b.Property<int>("Id")
-                    .ValueGeneratedOnAdd();
-
+                 .ValueGeneratedOnAdd();
                 b.Property<string>("Name")
-                    .IsRequired();
-
+                 .IsRequired();
                 b.HasKey("Id");
-
                 b.ToTable("Users");
             });
 #pragma warning restore 612, 618
